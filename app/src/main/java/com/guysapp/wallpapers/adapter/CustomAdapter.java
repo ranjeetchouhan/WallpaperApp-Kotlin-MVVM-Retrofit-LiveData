@@ -8,7 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
 import com.guysapp.wallpapers.R;
-import com.guysapp.wallpapers.model.DataItem;
+import com.guysapp.wallpapers.model.Hit;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -18,8 +18,8 @@ public class CustomAdapter extends BaseAdapter {
     LayoutInflater inflter;
 
     private Context mContext;
-    private List<DataItem> dataItems;
-    public CustomAdapter(Context context, List<DataItem> getList){
+    private List<Hit> dataItems;
+    public CustomAdapter(Context context, List<Hit> getList){
         dataItems = getList;
         mContext = context;
 
@@ -49,7 +49,7 @@ public class CustomAdapter extends BaseAdapter {
         ImageView icon = (ImageView) convertView.findViewById(R.id.icon); // get the reference of ImageView
 //        icon.setImageResource(logos[i]); // set logo images
 
-        Picasso.with(mContext).load(dataItems.get(position).getUrl()).placeholder(R.drawable.download).into(icon);
+        Picasso.with(mContext).load(dataItems.get(position).getPreviewURL()).placeholder(R.drawable.download).into(icon);
 
         return convertView;
     }

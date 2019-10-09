@@ -8,7 +8,7 @@ public class RetrofitClientInstance {
 
 
         private static Retrofit retrofit;
-        private static final String BASE_URL = "http://www.mocky.io/v2/";
+        private static final String BASE_URL = "https://pixabay.com/api/";
 
         public static Retrofit getRetrofitInstance() {
             if (retrofit == null) {

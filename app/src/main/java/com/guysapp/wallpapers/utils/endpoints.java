@@ -1,12 +1,20 @@
 package com.guysapp.wallpapers.utils;
 
-import com.guysapp.wallpapers.model.ResponseModel;
+import com.guysapp.wallpapers.model.ResponsePixebay;
+
+import java.util.HashMap;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Headers;
+import retrofit2.http.Query;
+import retrofit2.http.QueryMap;
 
 public interface endpoints {
 
-    @GET("5d8f20833200004d00adeb82")
-    Call<ResponseModel> getImages();
+
+
+    @GET(".")
+    Call<ResponsePixebay> getImages(@QueryMap HashMap<String,String> hashMap);
 }
