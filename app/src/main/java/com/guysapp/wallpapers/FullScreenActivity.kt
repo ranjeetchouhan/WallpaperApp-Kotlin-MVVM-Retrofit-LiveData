@@ -13,11 +13,11 @@ class FullScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState, persistentState)
         setContentView(R.layout.activity_fullscreen)
 
-//        var previewURL = intent.getStringExtra("url")
-//
-//
-//        Picasso.with(this).load(previewURL)
-//            .placeholder(R.drawable.download).into(image_fullscreen)
+        var previewURL = intent.getStringExtra("url")
+
+
+        Picasso.with(this).load(previewURL)
+            .placeholder(R.drawable.download).into(image_fullscreen)
 
     }
 }
