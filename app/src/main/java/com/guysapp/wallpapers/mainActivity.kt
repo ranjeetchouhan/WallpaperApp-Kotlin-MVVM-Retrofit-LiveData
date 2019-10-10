@@ -35,6 +35,8 @@ class mainActivity : AppCompatActivity() {
 
         simpleGridView.adapter = mAdapter
 
+        
+
         articleViewModel = ViewModelProviders.of(this).get(MainActivityViewModel::class.java)
     }
 
