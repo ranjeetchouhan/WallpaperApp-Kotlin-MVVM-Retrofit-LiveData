@@ -55,16 +55,16 @@ public class CustomAdapter extends BaseAdapter {
         Picasso.with(mContext).load(dataItems.get(position).getPreviewURL()).placeholder(R.drawable.download).into(icon);
 
 
-//        icon.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                Intent intent = new Intent(mContext, FullScreenActivity.class);
-//                intent.putExtra("url",dataItems.get(position).getPreviewURL());
-//                mContext.startActivity(intent);
-//                //Toast here
-//
-//            }});
+        icon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(mContext, FullScreenActivity.class);
+                intent.putExtra("url",dataItems.get(position).getPreviewURL());
+                mContext.startActivity(intent);
+                //Toast here
+
+            }});
 
         return convertView;
     }
